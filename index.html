@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Home Section -->
+        <div id="home-section" class="section active">
+            <h2>Finance Tracker (₹)</h2>
+            <label for="budget">Set Budget (₹):</label>
+            <input type="number" id="budget" placeholder="Enter your budget">
+            <button class="set-btn" onclick="setBudget()">Set</button>
+
+            <h3>Add Expense</h3>
+            <label for="expense">Expense Name:</label>
+            <input type="text" id="expense" placeholder="E.g. Food, Travel">
+            <label for="amount">Amount (₹):</label>
+            <input type="number" id="amount" placeholder="Enter amount">
+            <label for="file">Upload Bill:</label>
+            <input type="file" id="file">
+            <label for="date">Date:</label>
+            <input type="date" id="date">
+            <button class="add-btn" onclick="addExpense()">Add Expense</button>
+
+            <h3>Remaining Balance: ₹<span id="balance">0</span></h3>
+        </div>
+
+        <!-- Timeline Section -->
+        <div id="timeline-section" class="section">
+            <h2>📅 Expense Timeline</h2>
+            <ul id="expense-list"></ul>
+        </div>
+
+        <!-- Add Section -->
+        <div id="add-section" class="section">
+            <h2>➕ Add New Expense</h2>
+            <label for="new-expense">Expense Name:</label>
+            <input type="text" id="new-expense" placeholder="E.g. Shopping, Bills">
+            <label for="new-amount">Amount (₹):</label>
+            <input type="number" id="new-amount" placeholder="Enter amount">
+            <button class="add-btn" onclick="addExpense()">Add</button>
+        </div>
+
+        <!-- Settings Section -->
+        <div id="settings-section" class="section">
+            <h2>⚙️ Settings</h2>
+            <p>Manage your finance tracker settings here.</p>
+        </div>
+
+        <!-- Navigation Bar -->
+        <nav class="nav-bar">
+            <div class="nav-item active" onclick="showSection('home')">🏠 Home</div>
+            <div class="nav-item" onclick="showSection('timeline')">📅 Timeline</div>
+            <div class="nav-item" onclick="showSection('add')">➕ Add</div>
+            <div class="nav-item" onclick="showSection('settings')">⚙️ Settings</div>
+        </nav>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

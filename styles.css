@@ -1,0 +1,91 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Full Page Centering */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+/* 9:16 Ratio Box */
+.container {
+    width: 90vw;
+    max-width: 380px; /* Ensures the box is compact */
+    height: 640px; /* Adjusted for 9:16 ratio */
+    background: white;
+    border: 3px solid green;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+/* Hide all sections initially */
+.section {
+    display: none;
+}
+
+/* Show only active section */
+.section.active {
+    display: block;
+}
+
+/* Input Fields */
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 2px solid green;
+    border-radius: 5px;
+}
+
+/* Buttons */
+.set-btn, .add-btn {
+    background: green;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.set-btn:hover, .add-btn:hover {
+    background: darkgreen;
+}
+
+/* Bottom Navigation Bar (Inside the Box) */
+.nav-bar {
+    display: flex;
+    justify-content: space-around;
+    background: green;
+    border-radius: 10px;
+    padding: 10px 0;
+}
+
+/* Navigation Items */
+.nav-item {
+    color: white;
+    font-weight: bold;
+    flex: 1;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Highlight Active Tab */
+.nav-item.active {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    padding: 5px;
+}
